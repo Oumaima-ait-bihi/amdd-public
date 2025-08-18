@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/AssociationAMDD/plateforme-amdd.git', credentialsId: 'github-token'
+            }
+        }
+
+        stage('Build Docker image') {
+            steps {
+                script {
+                    docker.build('plateforme-amdd:latest')
+                }
+            }
+        }
+
+        stage('Run Docker container') {
+            steps {
+                script {
+                    docker.image('plateforme-amdd:latest').run('-d -p 8080:8080')
+                }
+            }
+        }
+    }
+}

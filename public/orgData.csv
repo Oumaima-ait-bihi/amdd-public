@@ -1,0 +1,10 @@
+name,position,photo,id,parent
+Mohamed ITI,Président,1,president,
+Mohamed MGHABAR,Vice Président,2,vicePresident,
+Abderrazzak SAMADI,Secrétaire Général,3,secretaireGeneral,president
+Essaifi Ahmed,Vice Secrétaire Général,4,viceSecretaireGeneral,president
+Hafsa Lbrini,Trésorerie Générale,5,tresorerieGeneral,president
+Hajar Hamis,Vice-trésorerie,6,vicetresorerieGeneral,president
+Mohcine ESSAYEH,Conseil 1,7,consultant1,president
+Ibrahim LACHERAI,Conseil 2,8,consultant2,president
+Youssef NAAMANE,Conseil 3,9,consultant3,president

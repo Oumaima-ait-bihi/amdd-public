@@ -1,0 +1,22 @@
+name,position,photo,id,parent
+CDD,Comite,1,cdd,
+ESSAIFI Ahmed,President,2,president_cdd,cdd
+prenom,Adjoint,3,adjoint_cdd,cdd
+CCMD,Comite,4,ccmd,
+ESSAYEH Mohcine,President,5,president_ccmd,ccmd
+Hamis Hajar,Adjoint,6,adjoint_ccmd,ccmd
+CDRHRE,Comite,7,ccjrhre,
+LBRINI Hafsa,President,8,president_ccjrhre,ccjrhre
+prenom,Adjoint,9,adjoint_ccjrhre,ccjrhre
+CASD,Comite,9,casd,
+MGHABAR Mohamed,President,10,president_casd,casd
+NAAMANE Youssef,Adjoint,11,adjoint_casd,casd
+CED,Comite,12,ced,
+LACHERAI Ibrahim,President,13,president_ced,ced
+prenom,Adjoint,14,adjoint_ced,ced
+CFD,Comite,15,cfrid,
+SAMADI Abderrazak,President,16,president_cfrid,cfrid
+prenom,Adjoint,17,adjoint_cfrid,cfrid
+CCJ,Comite,18,ccj
+NAAMANE Youssef,President,19,president_ccj,ccj
+prenom,Adjoint,20,adjoint_ccj,ccj
