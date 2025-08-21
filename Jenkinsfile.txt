@@ -22,9 +22,10 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    sh './mvnw sonar:sonar -Dsonar.projectKey=amdd-app -Dsonar.host.url=http://localhost:9000 -Dsonar.login=squ_20254bb88475b7acf8e15383f0d7d8a5d9c73bfb'
+                    sh './mvnw sonar:sonar -Dsonar.projectKey=amdd_app_key -Dsonar.host.url=http://localhost:9000 -Dsonar.login=squ_20254bb88475b7acf8e15383f0d7d8a5d9c73bfb'
                 }
             }
         }
     }
 }
+
