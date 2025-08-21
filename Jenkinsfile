@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     tools {
-        jdk 'Java17'                   // Assure-toi que ce JDK est configuré dans Jenkins
         sonarQubeScanner 'sonar-scanner' // Nom exact du SonarQube Scanner dans Jenkins
     }
 
@@ -28,3 +27,4 @@ pipeline {
         }
     }
 }
+
