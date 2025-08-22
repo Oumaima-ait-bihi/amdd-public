@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        sonarQubeScanner 'sonar-scanner'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -11,10 +15,14 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    // Récupération du chemin du SonarQube Scanner configuré dans Jenkins
-                    def scannerHome = tool 'sonar-scanner'  // Nom exact du scanner dans Jenkins
-                    withSonarQubeEnv('sonarqube') {        // Nom du serveur SonarQube
-                        sh "${scannerHome}/bin/sonar-scanner"
+                    withSonarQubeEnv('sonarqube') { 
+                        sh """
+                        sonar-scanner \
+                        -Dsonar.projectKey=amdd \
+                        -Dsonar.sources=. \
+                        -Dsonar.host.url=$SONAR_HOST_URL \
+                        -Dsonar.login=$SONAR_AUTH_TOKEN
+                        """
                     }
                 }
             }
