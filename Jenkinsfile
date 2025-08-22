@@ -16,7 +16,7 @@ pipeline {
                     withSonarQubeEnv('sonarqube') {
                         sh """
                         ${scannerHome}/bin/sonar-scanner \
-                        -Dsonar.projectKey=amdd-app \
+                        -Dsonar.projectKey=amdd \
                         -Dsonar.sources=. \
                         -Dsonar.host.url=$SONAR_HOST_URL \
                         -Dsonar.login=$SONAR_AUTH_TOKEN
@@ -27,3 +27,4 @@ pipeline {
         }
     }
 }
+
