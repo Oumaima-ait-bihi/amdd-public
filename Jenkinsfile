@@ -11,10 +11,11 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    // Injection de l'environnement SonarQube (nom configuré dans Jenkins)
+                    // Récupération du chemin complet du scanner configuré
+                    def scannerHome = tool 'sonar-scanner'  // Nom exact dans Jenkins
                     withSonarQubeEnv('sonarqube') {
                         sh """
-                        sonar-scanner \
+                        ${scannerHome}/bin/sonar-scanner \
                         -Dsonar.projectKey=amdd-app \
                         -Dsonar.sources=. \
                         -Dsonar.host.url=$SONAR_HOST_URL \
